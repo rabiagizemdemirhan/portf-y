@@ -1,0 +1,57 @@
+import time
+
+def display_storyline(choice):
+    if choice == '1':
+        print("\nSeçim: Saat 03:00'da orman yolunda araban bozuldu. Orman'da bir ışık gördünüz. Işığa doğru yürüdünüz. Karanlık ve sessiz bir yolculuk başlıyor.")
+        time.sleep(1)
+        print("Bir çatırdama sesi duyuyorsunuz ve bir ayının size doğru geldiğini fark ediyorsunuz.")
+        print("1. Kaçmaya çalış\n2. Yere yat ve hareketsiz kal")
+        new_choice = input("Ne yapacaksınız? (1/2): ")
+        if new_choice == '1':
+            print("Koştunuz ama ayı çok hızlıydı. Maalesef yakalandınız.")
+        elif new_choice == '2':
+            print("Hareketsiz kalarak ayının dikkatini çekmediniz ve kurtuldunuz!")
+        else:
+            print("Geçersiz seçim. Maceranız burada sona erdi.")
+    elif choice == '2':
+        print("\nSeçim: Tekrar ışığa doğru yürümeye başladınız. Su sesi geliyor, nehire yakınsınız.")
+        time.sleep(1)
+        print("Uzaktan bir balıkçı kulübesi görüyorsunuz.")
+        print("1. Kulübeye git\n2. Yola devam et")
+        new_choice = input("Ne yapacaksınız? (1/2): ")
+        if new_choice == '1':
+            print("Balıkçı sizi sıcak bir şekilde karşıladı ve yemek verdi. Güvenli bir gece geçirdiniz. Ancak, balıkçı sıcak bir yatak öneriyor ve kalmanızı istiyor.")
+            stay_choice = input("Kalmak istiyor musunuz? (E/H): ")
+            if stay_choice.lower() == 'e':
+                print("Balıkçının evinde kaldınız, ancak sabah uyanmadınız. Balıkçı sizi uykunuzda öldürdü.")
+            elif stay_choice.lower() == 'h':
+                print("Balıkçı sizi şehre bıraktı ve güvenle evinize döndünüz.")
+            else:
+                print("Geçersiz seçim. Maceranız burada sona erdi.")
+        elif new_choice == '2':
+            print("Yolda ilerlerken kayboldunuz ve gece karanlığında yönünüzü bulamadınız.")
+            print("Bir süre sonra yola geri döndünüz ve arabanıza ulaştınız.")
+            print("1. Arabanın içinde sabaha kadar bekle\n2. Yolda yürümeye devam et")
+            car_choice = input("Ne yapacaksınız? (1/2): ")
+            if car_choice == '1':
+                print("Arabanın içinde sabaha kadar beklediniz. Sabah bir araba geçti ve sizi aldı, ancak bu insanlar kötü niyetliydi ve kaçırıldınız.")
+            elif car_choice == '2':
+                print("Yolda yürümeye devam ettiniz. Ancak, balıkçı sizi takip etmişti ve sonunda sizi yakalayıp öldürdü.")
+            else:
+                print("Geçersiz seçim. Maceranız burada sona erdi.")
+        else:
+            print("Geçersiz seçim. Maceranız burada sona erdi.")
+    else:
+        print("Geçersiz seçim. Lütfen 1 veya 2 girin.")
+
+def adventure_game():
+    print("Macera Oyunu\n")
+    time.sleep(1)
+    print("Bir ormanda uyanıyorsunuz ve iki yol var.")
+    print("1. Ormana doğru yürü\n2. Nehir boyunca ilerle")
+    
+    choice = input("Hangi yolu seçiyorsunuz? (1/2): ")
+    display_storyline(choice)
+
+if __name__ == "__main__":
+    adventure_game()
